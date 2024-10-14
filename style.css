@@ -18,6 +18,10 @@ body{
     ;
 }
 
+h1,p{
+    text-align: justify;
+}
+
 .allheader{
     margin: 0 1rem;
 }
@@ -62,18 +66,37 @@ body{
 /* Main area */
 .container{
     grid-area: container;
-    max-width: 920px;
+    /* max-width: 920px; */
     align-self: center;
     margin: 0 auto;
 }
 .hero{
     background-image: url(./images/image-hero.png);
     background-position:center;
-    background-size: cover;
+    background-size: contain;
     color: #FFFFFF;
     padding: 3rem 1rem 1rem;
     margin-bottom: 1rem;
     height: 18rem;
+}
+
+/* About me styles */
+.aboutme-hero{
+    padding: 3rem 1rem 1rem;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+}
+.bold-p{
+    font-weight: 800;
+}
+
+.about-feautereimg{
+    width: 11.375rem;
+    height: 11.375rem;
+    border-radius: 50%;
 }
 
 .article{
@@ -108,20 +131,45 @@ body{
     color: #ECECEC;
     margin: 0;
 }
-.copyright{
+.copyright,
+.fa-brands{
     color: #D7D7D7;
     margin: 0;
 }
+
+.allfooter a{
+    margin-right: 0.5rem;
+}
+
 
 @media (min-width:600px){
     .container{
         display: grid;
         grid-template-columns: repeat(3, minmax(200px, 1fr));
         gap: 0.5rem;
+    
     }
     .hero{
         grid-column: span 3;
         width: 100%;
+        /* margin: 0 auto; */
+    }
+
+    .aboutme-hero,
+    .heading{
+        grid-column: span 3;
+    }
+
+    .intro{
+        display: flex;
+        align-items: center;
+    }
+    .intro-part2{
+        padding: 0 2rem;
+    }
+
+    .about-feautereimg{
+        margin-right: 1rem;
     }
 
     .allheader{ 
