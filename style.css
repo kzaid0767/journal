@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+html,
+body{
+    margin: 0;
+    font-family: "Source Sans 3", sans-serif;
+    min-width: 330px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "allheaders"
+    "container"
+    "allfooters"
+    ;
+}
+
+.allheader{
+    margin: 0 1rem;
+}
+
+/* Header styles */
+
+.allheader{
+    grid-area: allheaders;
+    color: #0E0E0E;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/* header left side */
+.header-left{
+    display: flex;
+    align-items: center;
+    color: #0E0E0E;
+    font-weight: 600;
+}
+
+.header-right a{
+    font-weight: 600;
+    color: #090909;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.header-right a:hover{
+    text-decoration: underline;
+}
+.header-left img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.1rem;
+}
+
+/* Main area */
+.container{
+    grid-area: container;
+    max-width: 920px;
+    align-self: center;
+    margin: 0 auto;
+}
+.hero{
+    background-image: url(./images/image-hero.png);
+    background-position:center;
+    background-size: cover;
+    color: #FFFFFF;
+    padding: 3rem 1rem 1rem;
+    margin-bottom: 1rem;
+    height: 18rem;
+}
+
+.article{
+    padding: 0 1rem;
+}
+
+.article img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.date{
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.article h1{
+    margin: 0;
+}
+
+.allfooter{
+    grid-area: allfooters;
+    height: 6rem;
+    background-color: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+}
+.text{
+    color: #ECECEC;
+    margin: 0;
+}
+.copyright{
+    color: #D7D7D7;
+    margin: 0;
+}
+
+@media (min-width:600px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 0.5rem;
+    }
+    .hero{
+        grid-column: span 3;
+        width: 100%;
+    }
+
+    .allheader{ 
+        margin: 0 2rem;
+    }
+
+}
