@@ -75,7 +75,7 @@ h1,p{
     background-position:center;
     background-size: contain;
     color: #FFFFFF;
-    padding: 3rem 1rem 1rem;
+    padding: 1rem 1rem;
     margin-bottom: 1rem;
     height: 18rem;
 }
@@ -156,7 +156,6 @@ h1,p{
     .hero{
         grid-column: span 3;
         width: 100%;
-        /* margin: 0 auto; */
     }
 
     .aboutme-hero,
