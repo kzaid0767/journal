@@ -5,7 +5,7 @@ html,
 body{
     margin: 0;
     font-family: "Source Sans 3", sans-serif;
-    min-width: 330px;
+    min-width: 333px;
 }
 
 body{
@@ -91,6 +91,10 @@ h1,p{
 }
 .bold-p{
     font-weight: 800;
+}
+
+.recentprojectstitle{
+    margin-top: 0rem;
 }
 
 .about-feautereimg{
